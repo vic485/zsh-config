@@ -54,6 +54,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+## Options
+setopt extendedglob # Extended globbing. Allows using regular expressions with *
+setopt nocaseglob # Case insensitive globbing
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion
+
 ## Aliases
 alias cp='cp -i' # Confirm overwrite
 alias junzip='unzip -O CP932' # Unzip files that have Microsoft "shift-jis" encoding
