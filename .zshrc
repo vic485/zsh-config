@@ -57,8 +57,19 @@ source $ZSH/oh-my-zsh.sh
 ## Options
 setopt extendedglob # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob # Case insensitive globbing
+setopt numericglobsort # Sort filenames numerically when it makes sense
+setopt nobeep # No beep
+setopt appendhistory # Immediately append history instead of overwriting
+setopt histignorealldups # If a new command is a duplicate, remove the older one
+setopt inc_append_history # save commands are added to the history immediately, otherwise only when shell exits.
+setopt histignorespace # Don't save commands that start with space
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive tab completion
+zstyle ':completion:*' rehash true # automatically find new executables in path
+# Speed up completions
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
 
 ## Aliases
 alias cp='cp -i' # Confirm overwrite
