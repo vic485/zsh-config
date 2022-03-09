@@ -73,7 +73,9 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 ## Aliases
 alias cp='cp -i' # Confirm overwrite
-alias junzip='unzip -O CP932' # Unzip files that have Microsoft "shift-jis" encoding
+# Code pages seem to have been removed recently.
+# Replaced with using https://github.com/rekka/unzip-jp
+#alias junzip='unzip -O CP932' # Unzip files that have Microsoft "shift-jis" encoding
 alias expand-tmp='sudo mount -o remount,size=10G /tmp/' # Temporarily expand /tmp/
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
