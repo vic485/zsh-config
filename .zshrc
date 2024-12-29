@@ -77,6 +77,9 @@ alias cp='cp -i' # Confirm overwrite
 # Replaced with using https://github.com/rekka/unzip-jp
 #alias junzip='unzip -O CP932' # Unzip files that have Microsoft "shift-jis" encoding
 alias expand-tmp='sudo mount -o remount,size=10G /tmp/' # Temporarily expand /tmp/
+# Protontricks
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
 
 ## Shell exports
 # Prevent wine from registering applications on the system.
